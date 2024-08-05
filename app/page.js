@@ -23,10 +23,10 @@ export default function Home() {
 
   function sendEmail(event) {
     event.preventDefault();
-    Email.send({
+    window.Email.send({
       Host: "smtp.elasticemail.com",
-      Username: "vedantspatel33@gmail.com",
-      Password: "2A315C0CB2387894387C6E7A0AB2A7A0C587",
+      Username: process.env.NEXT_PUBLIC_SMTP_USER,
+      Password: process.env.NEXT_PUBLIC_SMTP_PASS,
       To: 'vedantspatel33@gmail.com',
       From: formData.email,
       Subject: "New Portfolio Inquiry",
