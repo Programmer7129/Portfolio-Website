@@ -27,7 +27,7 @@ export default function Home() {
       Host: "smtp.elasticemail.com",
       Username: process.env.NEXT_PUBLIC_SMTP_USER,
       Password: process.env.NEXT_PUBLIC_SMTP_PASS,
-      To: 'vedantspatel33@gmail.com',
+      To: process.env.NEXT_PUBLIC_SMTP_USER,
       From: formData.email,
       Subject: "New Portfolio Inquiry",
       Body: `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nMessage: ${formData.message}`
