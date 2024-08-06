@@ -643,7 +643,7 @@ export default function Home() {
                         <section id="contact" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
                             <div className="w-full max-w-lg shadow-md rounded-lg p-6 text-white">
                                 <h2 className="text-2xl font-bold text-white text-center mb-6">Get in Touch</h2>
-                                <form id="" action="your-email-endpoint" method="POST" className="space-y-4" onSubmit={(event) => { handleSubmit(event); reset(); }}>
+                                <form method="POST" className="space-y-4" onSubmit={(event) => { handleSubmit(event); reset(); }}>
                                   <div className="flex space-x-4">
                                     <div className="w-1/2">
                                       <label htmlFor="firstName" className="block text-sm font-medium text-white-700">First Name</label>
