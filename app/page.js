@@ -21,6 +21,15 @@ export default function Home() {
     });
   }
 
+  function reset() {
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      message: ''
+    });
+  }
+
   async function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -30,27 +39,28 @@ export default function Home() {
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: json
-    });
-    const result = await response.json();
-    if (result.success) {
-        console.log(result);
-    }
-  }
+    console.log("Form Data:", object); // Debugging: Log form data
+    console.log("JSON Payload:", json); // Debugging: Log JSON payload
 
-  function reset() {
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      message: ''
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: json
+      });
+      const result = await response.json();
+      if (result.success) {
+          console.log("Form submission successful:", result);
+      }
+      else{
+        console.error("Form submission failed:", result)
+      }
+    } catch (error) {
+      console.error("Error submitting the form: ", error);
+    }
   }
 
 
