@@ -15,6 +15,8 @@ export default function Home() {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   function handleChange(event) {
     const { name, value } = event.target;
     setFormData({
@@ -35,6 +37,7 @@ export default function Home() {
   async function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
+    setIsSubmitting(true); 
 
     formData.append("access_key", process.env.NEXT_PUBLIC_WEB_FORM_ACCESS_KEY);
 
@@ -56,14 +59,18 @@ export default function Home() {
       const result = await response.json();
       if (result.success) {
           console.log("Form submission successful:", result);
+          event.target.reset();  // Reset the form fields
+          reset();
       }
       else{
         console.error("Form submission failed:", result)
       }
     } catch (error) {
       console.error("Error submitting the form: ", error);
+    } finally {
+      setIsSubmitting(false); // Reset loading state after submission is done
     }
-  }
+  };
 
 
   return (
@@ -280,7 +287,7 @@ export default function Home() {
                                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">About Me</h2>
                             </div>
                             <div>
-                                <p>I'm a student at University of California Davis, studying Computer Science and Engineering. 
+                                <p>I'm a student at <span className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300">University of California Davis</span>, studying <span className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300">Computer Science and Engineering</span>. 
                                 I am an aspiring engineer with a passion for tech and a knack for problem-solving. Experienced
                                 in Artificial Intelligence, Machine Learning, Data Science, and Full-Stack development. 
                                 Committed to innovation and community collaboration. Let's connect and create something 
@@ -685,8 +692,8 @@ export default function Home() {
                                     <textarea id="message" name="message" rows="4" onChange={handleChange} className="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm text-black focus:ring-indigo-500 focus:border-indigo-500"></textarea>
                                   </div>
                                   <div className="text-center">
-                                    <button type="submit" className="px-4 py-2 bg-indigo-600 text-white font-semibold rounded-md shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                      Send Message
+                                    <button type="submit" className="px-4 py-2 bg-indigo-600 text-white font-semibold rounded-md shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" disabled={isSubmitting}>
+                                      {isSubmitting ? 'Submitting...' : 'Send Message'}
                                     </button>
                                   </div>
                                 </form>
