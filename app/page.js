@@ -288,10 +288,15 @@ export default function Home() {
                             </div>
                             <div>
                                 <p>I'm a student at <span className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300">University of California Davis</span>, studying <span className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300">Computer Science and Engineering</span>. 
-                                I am an aspiring engineer with a passion for tech and a knack for problem-solving. Experienced
-                                in Artificial Intelligence, Machine Learning, Data Science, and Full-Stack development. 
-                                Committed to innovation and community collaboration. Let's connect and create something 
-                                extraordinary together.</p>
+                                Machine Learning and Artificial Intelligence enthusiast with a proven track record in developing innovative 
+                                AI solutions and optimizing system efficiency in industry and research settings. Currently interning in a 
+                                dynamic ML role where I apply automation and advanced pattern recognition techniques, achieving measurable 
+                                improvements in workflow efficiency. As a Research Assistant at UC Davis, I led the design and deployment 
+                                of a cutting-edge TinyML project, achieving high accuracy for ECG signal classification and significantly 
+                                enhancing device efficiency for wearable technology. With a diverse portfolio of projects and strong technical 
+                                skills in Python, SQL, Next.js, and AWS, I am passionate about harnessing AI to drive meaningful outcomes 
+                                and advance solutions in real-world applications. I am eager to contribute my expertise and innovative 
+                                approach to the fast-evolving tech landscape.</p>
 
                             </div>
                         </section>
