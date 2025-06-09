@@ -5,6 +5,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Vedant Patel",
+  icon: '/favicon.ico',
+  apple: '/apple-touch-icon.png',
+  shortcut: '/favicon.ico',
   description: "Personal Website",
 };
 
