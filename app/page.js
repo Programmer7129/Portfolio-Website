@@ -183,7 +183,7 @@ export default function Home() {
     // </main>
 
     <>
-    <link rel="preload" href="/_next/static/media/730e8169368baf37-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-next-font="size-adjust"/>
+    {/* <link rel="preload" href="/_next/static/media/730e8169368baf37-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-next-font="size-adjust"/>
     <link rel="preload" href="/_next/static/media/f1f0c35b32161446-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-next-font="size-adjust"/>
     <link rel="preload" href="/_next/static/media/d593a8df799d4ab1-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-next-font="size-adjust"/>
     <link rel="preload" href="/_next/static/media/dc792b508e6f91c7-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-next-font="size-adjust"/>
@@ -204,7 +204,7 @@ export default function Home() {
     <script src="/_next/static/chunks/506-95c309a4d817bb8b.js" defer=""></script>
     <script src="/_next/static/chunks/pages/index-f96aa925e82cd3c9.js" defer=""></script>
     <script src="/_next/static/eL2DSZNilqLaXtmcGMP2M/_buildManifest.js" defer=""></script>
-    <script src="/_next/static/eL2DSZNilqLaXtmcGMP2M/_ssgManifest.js" defer=""></script>
+    <script src="/_next/static/eL2DSZNilqLaXtmcGMP2M/_ssgManifest.js" defer=""></script> */}
 
     {/* // <body className="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900"> */}
     <div className="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
@@ -301,7 +301,7 @@ export default function Home() {
                             </div>
                         </section>
 
-                        <div className="mt-12">
+                        <div className="mt-12 mb-12">
                                 <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 font-semibold text-slate-200 group/link text-base" href="/Vedant Patel CV Latest.pdf" target="_blank" rel="noreferrer noopener" aria-label="View Full Résumé (opens in a new tab)">
                                     <span>
                                         View Full
@@ -598,7 +598,7 @@ export default function Home() {
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <img alt="Halcyon Theme homepage hero with screenshot of VS Code editor" loading="lazy" width="200" height="48" decoding="async" data-nimg="1" className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1" style={{color:"transparent"}} srcSet="/Launch Page CorpCred.png, /Homepage personal website screenshot.png" src="/Homepage personal website screenshot.png"/>
+                                            <img alt="Halcyon Theme homepage hero with screenshot of VS Code editor" loading="lazy" width="200" height="48" decoding="async" data-nimg="1" className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1" style={{color:"transparent"}} srcSet="/Launch Page CorpCred.png, /Launch Page CorpCred.png" src="/Launch Page CorpCred.png"/>
                                         </div>
                                     </li>
                                     <li className="mb-12">
